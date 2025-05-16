@@ -36,6 +36,12 @@ LED ledRite(11);
 BUZZER buzzLeft(10);
 BUZZER buzzRite(9);
 
+int readSpeed()
+{
+  int sensorValue = analogRead(A1);
+  return map(sensorValue, 0 , 1023 , 0 , 120);
+}
+
 class LaneSensor {
   public:
     bool leftDetected;
@@ -61,27 +67,32 @@ public:
   LaneDepartureSystem(LaneSensor& s) : sensor(s) {}
 
   void checkLaneDeparture() {
+    int speed = readSpeed();
+    
     if (!sensor.leftDetected && sensor.rightDetected) {
       Serial.println(" Drifting LEFT! Correct your steering.");
       ledLeft.on();
       ledMidd.off();
       ledRite.off();
-      buzzLeft.beep();
+      if(speed > 75) buzzLeft.beep(); 
     }
     else if (sensor.leftDetected && !sensor.rightDetected) {
       Serial.println(" Drifting RIGHT! Correct your steering.");
       ledLeft.off();
       ledMidd.off();
       ledRite.on();
-      buzzRite.beep();
+      if(speed > 75) buzzRite.beep();
     }
     else if (!sensor.leftDetected && !sensor.rightDetected) {
       Serial.println(" Completely off-lane! Emergency!");
       ledLeft.on();
       ledMidd.off();
       ledRite.on();
+      if(speed > 75)
+      {
       buzzLeft.beep();
       buzzRite.beep();
+      }
     }
     else {
       Serial.println(" In lane.");
