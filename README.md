@@ -88,7 +88,7 @@ If vehicle speed > 75 km/h, an **Over-speed Warning** is displayed on the LCD an
 ## 🤖 Created By
 
 **Maaz Khan**  
-4th Year B.Tech (CSE)  
+2nd Year B.Tech (CSE)  
 MIT College, RGPV University
 
 ---
