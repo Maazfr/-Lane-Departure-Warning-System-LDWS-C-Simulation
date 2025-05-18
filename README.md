@@ -58,3 +58,43 @@ If vehicle speed > 75 km/h, an **Over-speed Warning** is displayed on the LCD an
 
 ## 📂 Project Structure
 
+
+
+
+
+
+
+---
+
+## 🧪 Key Concepts Covered
+
+- Object-Oriented Programming in C++
+- LCD handling with `LiquidCrystal_I2C`
+- Analog sensor mapping
+- ADAS basics: Lane Departure, Over-speed logic
+- Serial monitoring for debugging
+
+---
+
+## 🚀 Future Improvements
+
+- Add Ultrasonic or IR sensors for real lane detection
+- Integrate GPS/GSM module for vehicle telemetry
+- Build a dashboard with OLED or TFT screen
+- Implement `millis()` for non-blocking behavior
+
+---
+
+## 🤖 Created By
+
+**Maaz Khan**  
+4th Year B.Tech (CSE)  
+MIT College, RGPV University
+
+---
+
+## 📜 License
+
+Open-source for learning and demonstration purposes.
+
+
