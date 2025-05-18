@@ -4,9 +4,7 @@ A compact Advanced Driver Assistance System (ADAS)-inspired project that simulat
 
 ---
 
-## 📷 Project Preview
 
-![Project Schematic](<upload or link to your image here>)
 
 ---
 
@@ -55,7 +53,7 @@ If vehicle speed > 75 km/h, an **Over-speed Warning** is displayed on the LCD an
 3. Connect your components according to the schematic.
 4. Upload the code to your Arduino Uno.
 5. Adjust the potentiometer to simulate speed.
-
+6. Or just go to the following link - https://wokwi.com/projects/431041630194126849 
 ---
 
 ## 📂 Project Structure
